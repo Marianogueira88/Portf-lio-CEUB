@@ -161,3 +161,44 @@ footer {
         gap: 10px;
     }
 }
+
+/* --- Night Mode --- */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --light-grey: #1a1a1a;
+    --dark-grey: #f4f4f4;
+}
+
+body.dark-mode header {
+    background: #0f0f0f;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode hr {
+    background: #333;
+}
+
+body.dark-mode blockquote {
+    color: #aaa;
+    border-left-color: var(--crimson);
+}
+
+/* Toggle Button Styles */
+.theme-toggle {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.theme-toggle:hover {
+    background: white;
+    color: #2d2d2d;
+}
