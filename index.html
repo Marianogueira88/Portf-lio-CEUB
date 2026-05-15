@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
 
     <style>
         /* =========================================
@@ -25,16 +24,13 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* Cor Lilás Definida para Títulos e Destaques */
         h2 {
             color: #9370DB;
-            /* MediumPurple */
             margin-top: 10px;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
-            /* Espaço entre ícone e texto */
         }
 
         h3 {
@@ -45,9 +41,12 @@
 
         p {
             margin: 5px 0;
+            line-height: 1.7;
         }
 
-        /* Estilos do Cabeçalho */
+        /* =========================================
+           CABEÇALHO
+           ========================================= */
         header {
             display: flex;
             justify-content: space-between;
@@ -98,10 +97,11 @@
 
         nav a:hover {
             color: #9370DB;
-            /* Destaque em lilás no hover */
         }
 
-        /* Botão de Tema */
+        /* =========================================
+           BOTÃO DE TEMA
+           ========================================= */
         .theme-toggle {
             cursor: pointer;
             padding: 8px 12px;
@@ -116,53 +116,67 @@
             background-color: #f0f0f0;
         }
 
-        /* Ajustes das Seções */
+        /* =========================================
+           SEÇÕES
+           ========================================= */
         section {
             padding: 25px 30px;
             border-bottom: 1px solid #eee;
         }
 
-        /* Espaçamento específico entre biografia e contatos */
         .contato {
             margin-top: 25px;
         }
 
+        /* =========================================
+           LINKS
+           ========================================= */
         .link-discreto {
             color: inherit;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
+            margin: 5px 0;
         }
 
         .link-discreto:hover {
-            opacity: 0.8;
             color: #9370DB;
         }
 
-        /* Container do PDF */
-        .pdf-container {
-            width: 100%;
-            max-width: 800px;
-            margin: 15px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        /* Bloco de Recomendação com Linha Lilás */
+        /* =========================================
+           RECOMENDAÇÃO
+           ========================================= */
         blockquote {
             background-color: #f9f9f9;
             border-left: 4px solid #9370DB;
-            /* Linha lilás */
-            padding: 10px 15px;
+            padding: 15px 20px;
             margin: 10px 0;
             font-style: italic;
-            transition: background-color 0.3s ease;
+            border-radius: 6px;
+        }
+
+        blockquote p {
+            text-align: justify;
+        }
+
+        cite {
+            display: block;
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: bold;
+            color: #555;
         }
 
         /* =========================================
-           MODO ESCURO (NIGHT MODE)
+           RODAPÉ
+           ========================================= */
+        footer {
+            padding: 20px 30px;
+        }
+
+        /* =========================================
+           MODO ESCURO
            ========================================= */
         body.dark-mode {
             background-color: #121212;
@@ -193,7 +207,6 @@
 
         body.dark-mode nav a:hover {
             color: #b39ddb;
-            /* Lilás mais claro para hover no dark mode */
         }
 
         body.dark-mode section {
@@ -217,11 +230,10 @@
         body.dark-mode blockquote {
             background-color: #1e1e1e;
             color: #cccccc;
-            /* A borda esquerda permanece lilás conforme solicitado */
         }
 
-        body.dark-mode .pdf-container {
-            border-color: #444;
+        body.dark-mode cite {
+            color: #b39ddb;
         }
     </style>
 </head>
@@ -233,29 +245,51 @@
             <h1>portfolioHUB</h1>
             <span class="made-by">Feito por Madu Nogueira</span>
         </div>
+
         <nav>
             <ul>
                 <li><a href="#perfil">Perfil</a></li>
                 <li><a href="#curriculo">Currículo</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#depoimentos">Recomendações</a></li>
+                <li><a href="#depoimentos">Recomendação</a></li>
             </ul>
         </nav>
-        <button class="theme-toggle" id="themeToggle"><i class="fa-solid fa-moon"></i> Modo Escuro</button>
+
+        <button class="theme-toggle" id="themeToggle">
+            <i class="fa-solid fa-moon"></i> Modo Escuro
+        </button>
     </header>
 
     <main>
+        <!-- =========================================
+             PERFIL
+             ========================================= -->
         <section id="perfil">
             <h2><i class="fa-solid fa-user"></i> Biografia</h2>
-            <p>Sou Maria Eduarda Nogueira Fernandes, graduanda em Ciência da Computação. Atualmente, dedico-me a
-                expandir meus conhecimentos técnicos e busco constantemente evoluir minhas competências.</p>
+            <p>
+                Sou Maria Eduarda Nogueira Fernandes, graduanda em Ciência da Computação.
+                Atualmente, dedico-me a expandir meus conhecimentos técnicos e busco
+                constantemente evoluir minhas competências.
+            </p>
 
             <div class="contato">
                 <h3>Contatos</h3>
-                <p><i class="fa-solid fa-location-dot"></i> <strong>Endereço:</strong> QI 14 Bloco P, Guará-DF</p>
-                <p><i class="fa-solid fa-phone"></i> <strong>Telefone:</strong> (61) 99125-2775
+
                 <p>
-                <p><i class="fa-solid fa-envelope"></i> <strong>E-mail:</strong> maria.nfernandes@sempreceub.com</p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <strong>Endereço:</strong> QI 14 Bloco P, Guará-DF
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    <strong>Telefone:</strong> (61) 99125-2775
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    <strong>E-mail:</strong> maria.nfernandes@sempreceub.com
+                </p>
+
                 <p>
                     <a href="https://www.linkedin.com/in/maria-eduarda-nogueira-fernandes-a07bb5303/" target="_blank"
                         class="link-discreto">
@@ -265,60 +299,109 @@
             </div>
         </section>
 
+        <!-- =========================================
+             CURRÍCULO
+             ========================================= -->
         <section id="curriculo">
             <h2><i class="fa-solid fa-file-invoice"></i> Currículo</h2>
+
             <article>
                 <h3>Formação Acadêmica</h3>
-                <p class="thin">Graduando em Ciência da Computação - UniCEUB (2024 - 2028)</p>
-                <p class="thin">Ensino Médio - Colégio Projeção (2021 - 2023)</p>
-                <p class="thin">Curso de Arte Digital - Escola Saga (2024 - 2026)</p>
+                <p>Graduando em Ciência da Computação - UniCEUB (2024 - 2028)</p>
+                <p>Ensino Médio - Colégio Projeção (2021 - 2023)</p>
+                <p>Curso de Arte Digital - Escola Saga (2024 - 2026)</p>
             </article>
+
             <article>
                 <h3>Idiomas</h3>
-                <p class="thin">Inglês Intermediário | Espanhol Básico</p>
+                <p>Inglês Intermediário | Espanhol Básico</p>
             </article>
         </section>
 
+        <!-- =========================================
+             HABILIDADES E COMPETÊNCIAS
+             ========================================= -->
         <section id="habilidades">
             <h2><i class="fa-solid fa-brain"></i> Habilidades e Competências</h2>
-            <p>Confira meu currículo de habilidades detalhado abaixo:</p>
 
-            <div class="pdf-container">
-                <embed src="seu-arquivo.pdf" type="application/pdf" width="100%" height="500px">
-            </div>
-            <p><small>Se o documento não carregar, <a href="seu-arquivo.pdf" target="_blank" class="link-discreto"
-                        style="text-decoration: underline;">clique aqui para baixar o PDF</a>.</small></p>
+            <p>Confira minha apresentação de habilidades e competências:</p>
+
+            <p>
+                <a href="https://docs.google.com/presentation/d/1q3NFqoomHl-Yn9p0eLmtHChL3q-otFw5J7ajfLyAhtk/edit?slide=id.p1#slide=id.p1"
+                    target="_blank" class="link-discreto">
+                    <i class="fa-solid fa-display"></i>
+                    Visualizar apresentação no Google Slides
+                </a>
+            </p>
+
+            <p>
+                <a href="Portfólio Github.pptx" download class="link-discreto">
+                    <i class="fa-solid fa-download"></i>
+                    Baixar apresentação (.pptx)
+                </a>
+            </p>
         </section>
 
+        <!-- =========================================
+             RECOMENDAÇÃO
+             ========================================= -->
         <section id="depoimentos">
-            <h2><i class="fa-solid fa-comments"></i> Recomendações</h2>
+            <h2><i class="fa-solid fa-comments"></i> Recomendação</h2>
+
             <blockquote>
-                <p>"O desempenho e a proatividade demonstrados foram exemplares."</p>
-                <cite>— Nome do Supervisor, Cargo</cite>
+                <p>
+                    Tive a oportunidade de acompanhar a trajetória da estudante Maria Eduarda
+                    durante os anos de 2024 e 2025, nas aulas de Língua Portuguesa, período em
+                    que demonstrou notável desenvolvimento acadêmico e pessoal. Trata-se de uma
+                    aluna dedicada, responsável e muito comprometida com sua aprendizagem.
+                    Desde o início, evidenciou grande facilidade na área da linguagem, tanto na
+                    escrita quanto na oralidade. Sua produção textual é clara, coerente e bem
+                    estruturada, revelando domínio vocabular e sensibilidade na construção de
+                    ideias. Na comunicação oral, destaca-se pela segurança, organização do
+                    pensamento e capacidade de argumentação, participando ativamente das
+                    atividades propostas.
+
+                    Além de suas habilidades acadêmicas, é uma estudante colaborativa,
+                    respeitosa e proativa, qualidades que contribuem significativamente para o
+                    ambiente de aprendizagem. Seu interesse pelo conhecimento e sua postura
+                    ética a tornam uma aluna promissora, com grande potencial para os desafios
+                    acadêmicos futuros.
+                </p>
+
+                <cite>— Ana Cristina - Professora</cite>
             </blockquote>
         </section>
     </main>
 
-    <footer style="padding: 20px 30px;">
-        <p class="thin">&copy; 2026 - Desafio portfolioHUB</p>
+    <footer>
+        <p>&copy; 2026 - Desafio portfolioHUB</p>
     </footer>
 
     <script>
         const themeToggleBtn = document.getElementById('themeToggle');
         const body = document.body;
 
+        // Carregar tema salvo
         if (localStorage.getItem('theme') === 'dark') {
             body.classList.add('dark-mode');
-            themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i> Modo Claro';
+            themeToggleBtn.innerHTML =
+                '<i class="fa-solid fa-sun"></i> Modo Claro';
         }
 
+        // Alternar tema
         themeToggleBtn.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
+
             const isDark = body.classList.contains('dark-mode');
+
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            themeToggleBtn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> Modo Claro' : '<i class="fa-solid fa-moon"></i> Modo Escuro';
+
+            themeToggleBtn.innerHTML = isDark
+                ? '<i class="fa-solid fa-sun"></i> Modo Claro'
+                : '<i class="fa-solid fa-moon"></i> Modo Escuro';
         });
     </script>
+
 </body>
 
 </html>
